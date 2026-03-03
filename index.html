@@ -12,7 +12,7 @@
   --housework:#7ec8c8;  --housework-light:#e3f6f6;
   --scrolling:#f0a0b8;  --scrolling-light:#fde8f0;
   --project:#a78bfa;    --project-light:#ede9fe;
-  --sleep:#6b9ed2;      --sleep-light:#e3eef8;
+
   --shadow:0 2px 16px rgba(45,36,32,.07);
   --shadow-md:0 4px 24px rgba(45,36,32,.10);
   --shadow-lg:0 8px 32px rgba(45,36,32,.13);
@@ -74,7 +74,7 @@ body{background:var(--bg);font-family:'Nunito',sans-serif;color:var(--text);min-
 .act-btn[data-cat="housework"]{border-color:var(--housework)} .act-btn[data-cat="housework"]::before{background:var(--housework)} .act-btn[data-cat="housework"].is-fg{background:var(--housework-light)} .act-btn[data-cat="housework"] .act-badge{background:var(--housework-light);color:var(--housework)}
 .act-btn[data-cat="scrolling"]{border-color:var(--scrolling)} .act-btn[data-cat="scrolling"]::before{background:var(--scrolling)} .act-btn[data-cat="scrolling"].is-fg{background:var(--scrolling-light)} .act-btn[data-cat="scrolling"] .act-badge{background:var(--scrolling-light);color:var(--scrolling)}
 .act-btn[data-cat="project"]{border-color:var(--project)}     .act-btn[data-cat="project"]::before{background:var(--project)}     .act-btn[data-cat="project"].is-fg{background:var(--project-light)}   .act-btn[data-cat="project"] .act-badge{background:var(--project-light);color:var(--project)}
-.act-btn[data-cat="sleep"]{border-color:var(--sleep)}         .act-btn[data-cat="sleep"]::before{background:var(--sleep)}         .act-btn[data-cat="sleep"].is-fg{background:var(--sleep-light)}       .act-btn[data-cat="sleep"] .act-badge{background:var(--sleep-light);color:var(--sleep)}
+
 
 /* stop button inside active row */
 .act-stop{margin-left:auto;flex-shrink:0;background:rgba(0,0,0,.06);border:none;border-radius:8px;padding:6px 12px;font-family:'Nunito',sans-serif;font-size:12px;font-weight:700;cursor:pointer;color:var(--text);transition:background .15s;display:none}
@@ -92,7 +92,6 @@ body{background:var(--bg);font-family:'Nunito',sans-serif;color:var(--text);min-
 .btime{font-size:11px;color:var(--muted);width:34px;text-align:right;font-variant-numeric:tabular-nums}
 .bfill.childcare{background:var(--childcare)} .bfill.housework{background:var(--housework)}
 .bfill.scrolling{background:var(--scrolling)} .bfill.project{background:var(--project)}
-.bfill.sleep{background:var(--sleep)}
 
 /* ── TIMELINE (track tab) ── */
 .tl-wrap{padding:0 12px;margin-bottom:16px}
@@ -114,7 +113,7 @@ body{background:var(--bg);font-family:'Nunito',sans-serif;color:var(--text);min-
 .ebar.housework{background:var(--housework)} .edur.housework{background:var(--housework-light);color:var(--housework)}
 .ebar.scrolling{background:var(--scrolling)} .edur.scrolling{background:var(--scrolling-light);color:var(--scrolling)}
 .ebar.project{background:var(--project)}     .edur.project{background:var(--project-light);color:var(--project)}
-.ebar.sleep{background:var(--sleep)}         .edur.sleep{background:var(--sleep-light);color:var(--sleep)}
+
 
 /* ════════════════════════
    REVIEW TAB
@@ -141,20 +140,19 @@ body{background:var(--bg);font-family:'Nunito',sans-serif;color:var(--text);min-
 .dt-hour-row{border-bottom:1px solid var(--border)}
 .dt-hour-row:last-child{border-bottom:none}
 .dt-hour-header{display:flex;align-items:center;min-height:44px}
-.dt-hour-label{width:48px;flex-shrink:0;padding:0 6px 0 12px;font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums;font-weight:600;border-right:1px solid var(--border);align-self:stretch;display:flex;align-items:center}
+.dt-hour-label{width:48px;flex-shrink:0;padding:0 6px 0 12px;font-size:11px;color:var(--project);font-variant-numeric:tabular-nums;font-weight:700;border-right:1px solid var(--border);align-self:stretch;display:flex;align-items:center;cursor:pointer;transition:background .15s}
+.dt-hour-label:active{background:var(--project-light)}
 .dt-blocks{flex:1;padding:5px 8px;display:flex;flex-direction:column;gap:3px}
 .dt-block{border-radius:7px;padding:5px 9px;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:space-between;gap:6px;cursor:pointer;transition:filter .15s}
 .dt-block:active{filter:brightness(.94)}
 .dt-block-name{display:flex;align-items:center;gap:4px}
 .dt-block-dur{font-variant-numeric:tabular-nums;opacity:.8}
-.dt-add-btn{display:flex;align-items:center;gap:5px;padding:5px 9px;font-size:11px;color:var(--muted);cursor:pointer;border-radius:7px;transition:background .15s;font-family:'Nunito',sans-serif;background:none;border:1.5px dashed var(--border);width:100%;text-align:left;font-weight:600}
-.dt-add-btn:active{background:#f0ebe5}
-.dt-add-icon{font-size:14px;opacity:.5}
+
 .dt-block.childcare{background:var(--childcare-light);color:var(--childcare)}
 .dt-block.housework{background:var(--housework-light);color:var(--housework)}
 .dt-block.scrolling{background:var(--scrolling-light);color:var(--scrolling)}
 .dt-block.project{background:var(--project-light);color:var(--project)}
-.dt-block.sleep{background:var(--sleep-light);color:var(--sleep)}
+
 
 /* ════════════════════════
    WEEK TAB
@@ -175,7 +173,7 @@ body{background:var(--bg);font-family:'Nunito',sans-serif;color:var(--text);min-
 .wseg{height:100%;border-radius:2px}
 .wseg.childcare{background:var(--childcare)} .wseg.housework{background:var(--housework)}
 .wseg.scrolling{background:var(--scrolling)} .wseg.project{background:var(--project)}
-.wseg.sleep{background:var(--sleep)}         .wseg.empty{background:var(--border);flex:1}
+.wseg.empty{background:var(--border);flex:1}
 .wtotal{font-size:11px;color:var(--muted);width:36px;text-align:right;font-variant-numeric:tabular-nums}
 .wproj{font-size:11px;font-weight:700;color:var(--project);width:34px;text-align:right;font-variant-numeric:tabular-nums}
 .week-legend{display:flex;flex-wrap:wrap;gap:6px 12px;margin:0 12px 16px;background:var(--card);border-radius:13px;padding:12px 14px;box-shadow:var(--shadow)}
@@ -257,7 +255,7 @@ body{background:var(--bg);font-family:'Nunito',sans-serif;color:var(--text);min-
     <div class="gap-msg-icon">💛</div>
     <div class="gap-msg-text"><strong id="gapMsgTitle"></strong><span id="gapMsgBody"></span></div>
   </div>
-  <div class="review-hint-bar">💡 시간대 탭 → 추가 / 기존 항목 탭 → 수정</div>
+  <div class="review-hint-bar">💡 왼쪽 시간 탭 → 추가 / 기존 항목 탭 → 수정</div>
   <div class="day-timeline" id="dayTimeline"></div>
 </div>
 
@@ -274,7 +272,6 @@ body{background:var(--bg);font-family:'Nunito',sans-serif;color:var(--text);min-
     <div class="leg"><div class="leg-dot" style="background:var(--housework)"></div>Housework</div>
     <div class="leg"><div class="leg-dot" style="background:var(--scrolling)"></div>Scrolling</div>
     <div class="leg"><div class="leg-dot" style="background:var(--project)"></div>Project</div>
-    <div class="leg"><div class="leg-dot" style="background:var(--sleep)"></div>Sleep</div>
   </div>
 </div>
 
@@ -310,10 +307,9 @@ body{background:var(--bg);font-family:'Nunito',sans-serif;color:var(--text);min-
 <script>
 const ACTS=[
   {id:'childcare', cat:'childcare', icon:'🍼', name:'Childcare'},
-  {id:'housework',  cat:'housework',  icon:'🧹', name:'Housework'},
+  {id:'housework',  cat:'housework',  icon:'🏠', name:'Housework'},
   {id:'scrolling',  cat:'scrolling',  icon:'📱', name:'Scrolling'},
   {id:'project',    cat:'project',    icon:'💻', name:'Side Project'},
-  {id:'sleep',      cat:'sleep',      icon:'🌙', name:'Sleep / Nap'},
 ];
 
 let log      = JSON.parse(localStorage.getItem('myd6_log')   || '[]');
@@ -343,7 +339,7 @@ function dayEnd(o){ return dayStart(o)+86400000-1; }
 function logForDay(o){ const s=dayStart(o),e=dayEnd(o); return log.filter(x=>x.start>=s&&x.start<=e&&x.end); }
 function liveDuration(id){ const s=sessions[id]; if(!s) return 0; return(s.accumulated||0)+(s.start?Date.now()-s.start:0); }
 function totalByCat(o){
-  const t={childcare:0,housework:0,scrolling:0,project:0,sleep:0};
+  const t={childcare:0,housework:0,scrolling:0,project:0};
   logForDay(o).forEach(e=>{t[e.cat]=(t[e.cat]||0)+(e.end-e.start);});
   if(!o) stack.forEach(id=>{const a=ACTS.find(x=>x.id===id);if(a)t[a.cat]=(t[a.cat]||0)+liveDuration(id);});
   return t;
@@ -442,8 +438,7 @@ function renderTimeline(){
 function renderBarChart(){
   const t=totalByCat(0), max=Math.max(...Object.values(t),1);
   document.getElementById('barRows').innerHTML=
-    [{cat:'childcare',icon:'🍼',l:'Childcare'},{cat:'housework',icon:'🧹',l:'Housework'},
-     {cat:'scrolling',icon:'📱',l:'Scrolling'},{cat:'project',icon:'💻',l:'Project'},{cat:'sleep',icon:'🌙',l:'Sleep'}]
+    [{cat:'childcare',icon:'🍼',l:'Childcare'},{cat:'housework',icon:'🏠',l:'Housework'},{cat:'scrolling',icon:'📱',l:'Scrolling'},{cat:'project',icon:'💻',l:'Project'}]
     .map(r=>`<div class="brow">
       <div class="brow-label">${r.icon} <span style="font-size:10px">${r.l}</span></div>
       <div class="btrack"><div class="bfill ${r.cat}" style="width:${t[r.cat]?t[r.cat]/max*100:0}%"></div></div>
@@ -480,7 +475,7 @@ function renderReview(){
     const hEntries=entries.filter(e=>e.start<hE&&e.end>hS).sort((a,b)=>a.start-b.start);
     html+=`<div class="dt-hour-row">
       <div class="dt-hour-header">
-        <div class="dt-hour-label">${String(h).padStart(2,'0')}:00</div>
+        <div class="dt-hour-label" onclick="openRetroModal(${h},${o})">${String(h).padStart(2,'0')}:00</div>
         <div class="dt-blocks">`;
     hEntries.forEach(e=>{
       const a=ACTS.find(x=>x.id===e.id)||{icon:'?',name:e.id};
@@ -490,10 +485,6 @@ function renderReview(){
         <div class="dt-block-dur">${fmtShort(dur)}</div>
       </div>`;
     });
-    // Always show add button
-    html+=`<button class="dt-add-btn" onclick="openRetroModal(${h},${o})">
-      <span class="dt-add-icon">+</span> ${hEntries.length>0?'항목 추가':'뭘 했는지 추가'}
-    </button>`;
     html+='</div></div></div>';
   }
   document.getElementById('dayTimeline').innerHTML=html;
@@ -520,7 +511,7 @@ function renderWeek(){
     const t=totalByCat(i), total=Object.values(t).reduce((a,b)=>a+b,0), hasData=total>0;
     if(t.project>0){ totalProjMs+=t.project; daysWithProj++; if(t.project>bestMs){bestMs=t.project;bestDay=dow+'요일';} }
     const segs=hasData
-      ?['childcare','housework','scrolling','project','sleep'].filter(c=>t[c]>0).map(c=>`<div class="wseg ${c}" style="flex:${t[c]/total}"></div>`).join('')
+      ?['childcare','housework','scrolling','project'].filter(c=>t[c]>0).map(c=>`<div class="wseg ${c}" style="flex:${t[c]/total}"></div>`).join('')
       :'<div class="wseg empty"></div>';
     html+=`<div class="week-row">
       <div class="wday ${isToday?'today':''}">${isToday?'오늘':dow}</div>
